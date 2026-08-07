@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+}
+
+@layer base {
+  .container {
+    margin: 0 auto;
+    @apply px-3  md:px-5;
+  }
+}
