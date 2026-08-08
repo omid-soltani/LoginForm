@@ -69,4 +69,10 @@
   .face-back {
     transform: rotateY(180deg);
   }
+  .liner-green {
+    @apply from-emerald-300 via-green-500 to-teal-700;
+  }
+  .liner-orange {
+    @apply from-orange-300 via-orange-500 to-amber-700;
+  }
 }

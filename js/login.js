@@ -26,6 +26,18 @@ const inputsValidateByBorder = (inputPassword, passRegex) => {
   }
 };
 
+const switchBtnHandler = (btnAction) => {
+  if (btnAction === "registration") {
+    card.classList.add("is-flipped");
+    d.body.classList.toggle("liner-green");
+    d.body.classList.toggle("liner-orange");
+  } else {
+    d.body.classList.toggle("liner-green");
+    d.body.classList.toggle("liner-orange");
+    card.classList.remove("is-flipped");
+  }
+};
+
 passwordInputs.forEach((passInput) => {
   passInput.addEventListener("input", () => {
     inputsValidateByBorder(passInput, passwordRegex);
@@ -45,10 +57,6 @@ usernameInput.addEventListener("input", () => {
 switchBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const btnType = e.currentTarget.dataset.action;
-    if (btnType === "registration") {
-      card.classList.add("is-flipped");
-    } else {
-      card.classList.remove("is-flipped");
-    }
+    switchBtnHandler(btnType);
   });
 });
