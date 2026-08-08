@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ورود | ثبت‌نام</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="./src/output.css">
 
 
@@ -40,7 +41,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
-                            <input id="email-form" type="email" placeholder=" "
+                            <input id="email-login-form" type="email" placeholder=" "
                                 class="email-inputs w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-emerald-600 outline-none transition  focus:bg-white">
                             <label for="email-form"
                                 class="input-label absolute flex items-center -translate-y-8.5 left-5 transition-all text-sm font-inter-medium text-emerald-600 ">email</label>
@@ -63,7 +64,7 @@
                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
 
-                            <input id="pasword-register" type="password" placeholder=" "
+                            <input au id="password-login-form" type="password" placeholder=" "
                                 class="password-inputs w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-emerald-600 outline-none transition  focus:bg-white ">
                             <label for="pasword-form"
                                 class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-emerald-600">password
@@ -84,7 +85,7 @@
                             </a>
                         </div>
                         <!--submit btn  -->
-                        <button type="button"
+                        <button id="login-btn" type="button"
                             class="mt-10 w-full rounded-xl bg-linear-to-l from-emerald-500 to-green-600 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-500/30 transition hover:from-emerald-600 hover:to-green-700 active:scale-[0.98]">
                             Login
                         </button>
@@ -170,8 +171,8 @@
                                     d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                             </svg>
 
-                            <input id="username-input" type="email" placeholder=" "
-                                class=" w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white ">
+                            <input id="username-register-form" type="email" placeholder=" "
+                                class="username-input w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white ">
                             <label for="email-form"
                                 class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-amber-600 ">username</label>
                         </div>
@@ -185,7 +186,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
-                            <input id="email-form" type="email" placeholder=" "
+                            <input id="email-register-form" type="email" placeholder=" "
                                 class="email-inputs w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white">
                             <label for="email-form"
                                 class="input-label absolute flex items-center -translate-y-8.5 left-5 transition-all text-sm font-inter-medium text-amber-600 ">email</label>
@@ -208,7 +209,7 @@
                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
 
-                            <input id="pasword-register" type="password" placeholder=" "
+                            <input id="password-register-form" type="password" placeholder=" "
                                 class="password-inputs w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white ">
                             <label for="pasword-form"
                                 class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-amber-600 ">password
@@ -232,7 +233,7 @@
                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
 
-                            <input id="pasword-form" type="password" placeholder=" "
+                            <input id="password-repeat-register-form" type="password" placeholder=" "
                                 class="password-inputs w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white  ">
                             <label for="pasword-repeat-form"
                                 class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-amber-600 ">password
@@ -240,7 +241,7 @@
                         </div>
                         <!--submit btn  -->
 
-                        <button type="button"
+                        <button id="register-btn" type="button"
                             class="mt-2 w-full rounded-xl bg-linear-to-l  from-amber-500 to-orange-400 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-500/30 transition hover:from-amber-600 hover:to-orange-500 active:scale-[0.98]">
                             Login
                         </button>
@@ -303,7 +304,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/login.js"></script>
 </body>
 
