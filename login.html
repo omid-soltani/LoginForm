@@ -30,12 +30,9 @@
 
                     <!-- form -->
                     <form class="flex flex-1 flex-col space-y-8">
-
-                        <!-- inputs -->
-
                         <!-- email input -->
                         <div class="relative">
-                            <svg class=" size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-emerald-700"
+                            <svg class=" size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-emerald-600"
                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -43,22 +40,21 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
-
+                            <input id="email-form" type="email" placeholder=" "
+                                class="email-inputs w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-emerald-600 outline-none transition  focus:bg-white">
                             <label for="email-form"
-                                class="absolute flex items-center top-0 bottom-0 my-auto left-5 text-sm font-inter-medium text-emerald-700 ">email</label>
-                            <input id="email-form" type="email"
-                                class="w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-emerald-700 outline-none transition  focus:bg-white  ">
+                                class="input-label absolute flex items-center -translate-y-8.5 left-5 transition-all text-sm font-inter-medium text-emerald-600 ">email</label>
                         </div>
                         <!-- password input -->
                         <div class="relative">
                             <svg id="eyes-icon"
-                                class="size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-emerald-700"
+                                class="size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-emerald-600"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
                             </svg>
-                            <svg class="flex hidden size-4.5 absolute  items-center top-0 bottom-0 my-auto right-4 text-emerald-700"
+                            <svg class="flex hidden size-4.5 absolute  items-center top-0 bottom-0 my-auto right-4 text-emerald-600"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -67,17 +63,17 @@
                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
 
+                            <input id="pasword-register" type="password" placeholder=" "
+                                class="password-inputs w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-emerald-600 outline-none transition  focus:bg-white ">
                             <label for="pasword-form"
-                                class="absolute flex items-center top-0 bottom-0 my-auto left-5 text-sm font-inter-medium text-emerald-700 ">password
+                                class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-emerald-600">password
                             </label>
-                            <input id="pasword-form" type="password"
-                                class="w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-emerald-700 outline-none transition  focus:bg-white  ">
                         </div>
                         <!-- password detail -->
                         <div class=" -mt-2 flex items-center justify-between text-sm">
                             <label for="remember-me-checkBox"
                                 class="relative rounded-lg  flex items-center gap-2 text-emerald-600">
-                                <div class="absolute left-0 rounded-xs bg-emerald-500 size-4 border border-emerald-400">
+                                <div class="absolute left-0 rounded-xs bg-emerald-500 size-4 border ">
                                 </div>
                                 <input id="remember-me-checkBox" type="checkbox" class=" hidden ">
                                 <span class="absolute left-6 whitespace-nowrap">remember me</span>
@@ -88,7 +84,6 @@
                             </a>
                         </div>
                         <!--submit btn  -->
-
                         <button type="button"
                             class="mt-10 w-full rounded-xl bg-linear-to-l from-emerald-500 to-green-600 py-3 text-sm font-bold text-white shadow-lg shadow-emerald-500/30 transition hover:from-emerald-600 hover:to-green-700 active:scale-[0.98]">
                             Login
@@ -152,10 +147,9 @@
                     </div>
                 </section>
 
-
                 <!-- register card -->
                 <section
-                    class=" face flex flex-col bg-white absolute inset-0 rounded-3xl shadow-2xl shadow-orange-900/30  p-7 ">
+                    class="face-back face flex flex-col bg-white absolute inset-0 rounded-3xl shadow-2xl shadow-orange-900/30  p-7 ">
 
                     <!-- form title -->
                     <div class="mb-7">
@@ -166,8 +160,21 @@
 
                     <!-- form -->
                     <form class="flex flex-1 flex-col space-y-6">
-                        <!-- inputs -->
 
+                        <!-- username input -->
+                        <div class="relative">
+                            <svg class=" size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-amber-600"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+
+                            <input id="username-input" type="email" placeholder=" "
+                                class=" w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white ">
+                            <label for="email-form"
+                                class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-amber-600 ">username</label>
+                        </div>
                         <!-- email input -->
                         <div class="relative">
                             <svg class=" size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-amber-600"
@@ -178,28 +185,11 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
-
+                            <input id="email-form" type="email" placeholder=" "
+                                class="email-inputs w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white">
                             <label for="email-form"
-                                class="absolute flex items-center top-0 bottom-0 my-auto left-5 text-sm font-inter-medium text-amber-600 ">email</label>
-                            <input id="email-form" type="email"
-                                class="w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white">
+                                class="input-label absolute flex items-center -translate-y-8.5 left-5 transition-all text-sm font-inter-medium text-amber-600 ">email</label>
                         </div>
-                        <!-- username input -->
-                        <div class="relative">
-                            <svg class=" size-4.5 absolute flex items-center top-0 bottom-0 my-auto right-4 text-amber-600"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                            </svg>
-
-
-                            <label for="email-form"
-                                class="absolute flex items-center top-0 bottom-0 my-auto left-5 text-sm font-inter-medium text-amber-600 ">email</label>
-                            <input id="email-form" type="email"
-                                class="w-full pr-10 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white  ">
-                        </div>
-
                         <!-- password input -->
                         <div class="relative">
                             <svg id="eyes-icon"
@@ -218,11 +208,11 @@
                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
 
+                            <input id="pasword-register" type="password" placeholder=" "
+                                class="password-inputs w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white ">
                             <label for="pasword-form"
-                                class="absolute flex items-center top-0 bottom-0 my-auto left-5 text-sm font-inter-medium text-amber-600 ">password
+                                class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-amber-600 ">password
                             </label>
-                            <input id="pasword-form" type="password"
-                                class="w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white focus:-2 ">
                         </div>
                         <!-- password-repeat-->
                         <div class="relative">
@@ -242,11 +232,11 @@
                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
 
+                            <input id="pasword-form" type="password" placeholder=" "
+                                class="password-inputs w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white  ">
                             <label for="pasword-repeat-form"
-                                class="absolute flex items-center top-0 bottom-0 my-auto left-5 text-sm font-inter-medium text-amber-600 ">password
+                                class="input-label absolute flex items-center -translate-y-8.5 transition-all left-5 text-sm font-inter-medium text-amber-600 ">password
                             </label>
-                            <input id="pasword-form" type="password"
-                                class="w-full rounded-xl border pr-10 border-slate-200 bg-slate-50 px-4 py-3 text-sm text-amber-600 outline-none transition  focus:bg-white  ">
                         </div>
                         <!--submit btn  -->
 
@@ -310,13 +300,11 @@
                     </div>
                 </section>
 
-
-
-
-
             </div>
         </div>
     </div>
+
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,13 @@
 }
 
 @layer base {
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translateY(-24px);
+    background: white;
+    padding: 0 5px;
+    font-size: 12px;
+  }
   body {
   }
 
