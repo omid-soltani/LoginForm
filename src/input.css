@@ -15,7 +15,9 @@
     padding: 0 5px;
     font-size: 12px;
   }
-  body {
+
+  input[type="checkbox"]:checked + div {
+    @apply bg-emerald-600;
   }
 
   @font-face {

@@ -4,10 +4,16 @@ const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const userNameRegex = /^[a-zA-Z0-9_-]{4,}$/;
 // form inputs
+
 const passwordInputs = d.querySelectorAll(".password-inputs");
-const formInputs = d.querySelectorAll("input:not([type='checkbox'])");
-const emailInputs = d.querySelectorAll(".email-inputs");
 const usernameInput = d.querySelector(".username-input");
+const registerInputs = d.querySelectorAll(
+  "#register-card input:not([type='checkbox'])",
+);
+const loginInputs = d.querySelectorAll(
+  "#login-card input:not([type='checkbox'])",
+);
+const emailInputs = d.querySelectorAll(".email-inputs");
 
 // switch btns
 const switchBtns = d.querySelectorAll(".switch-btn");
@@ -17,7 +23,7 @@ const card = d.getElementById("main-card");
 const registerCard = d.getElementById("register-card");
 const loginCard = d.getElementById("login-card");
 
-// login form
+// login form inputs
 const emailLoginForm = d.getElementById("email-login-form");
 const passwordLoginForm = d.getElementById("password-login-form");
 const loginBtn = d.getElementById("login-btn");
@@ -31,12 +37,16 @@ const passwordRepeatRegisterForm = d.getElementById(
   "password-repeat-register-form",
 );
 
-const inputsValidateByBorder = (inputPassword, passRegex) => {
-  if (passRegex.test(inputPassword.value.trim())) {
-    inputPassword.classList.remove("border-red-500!");
+const eyesIcon = d.querySelectorAll(".eyes-icon");
+const closeEyes = d.getElementById("close-eyes");
+const openEyes = d.getElementById("open-eyes");
+
+const inputsValidateByBorder = (input, regex) => {
+  if (regex.test(input.value.trim())) {
+    input.classList.remove("border-red-500!");
   } else {
-    inputPassword.classList.add("border-red-500!");
-    inputPassword.classList.remove("border-green-500!");
+    input.classList.add("border-red-500!");
+    input.classList.remove("border-green-500!");
   }
 };
 
@@ -144,6 +154,12 @@ const getItemsLocalStorage = (key) => {
 const setItemsLocalStorage = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
+
+const clearInputs = (inputs) => {
+  inputs.forEach((input) => {
+    input.value = "";
+  });
+};
 console.log(getItemsLocalStorage("users"));
 
 passwordInputs.forEach((passInput) => {
@@ -195,6 +211,7 @@ loginBtn.addEventListener("click", (e) => {
   }
 
   if (userIsLogin()) {
+    clearInputs(loginInputs);
     sweetAlertLogin(
       "welcome",
       "You have been logged in successfully.",
@@ -259,14 +276,30 @@ registerBtn.addEventListener("click", (e) => {
     );
     return;
   }
+  const usersInfo = getItemsLocalStorage("users");
+  const hasEmail = usersInfo.some((user) => {
+    return user.email === emailRegisterForm.value.trim();
+  });
+
+  if (hasEmail) {
+    sweetAlertRegister(
+      "repeat email",
+      "Email is already registered..",
+      "error",
+      true,
+      false,
+    );
+    return;
+  }
   const user = {
     username: usernameRegisterForm.value.trim(),
     email: emailRegisterForm.value.trim(),
     password: passwordRegisterForm.value.trim(),
   };
-  const usersInfo = getItemsLocalStorage("users");
+
   usersInfo.push(user);
   setItemsLocalStorage("users", usersInfo);
+  clearInputs(registerInputs);
   sweetAlertRegister(
     "Account created successfully!",
     "Welcome! Your account has been created.",
@@ -274,4 +307,15 @@ registerBtn.addEventListener("click", (e) => {
     false,
     true,
   );
+});
+
+eyesIcon.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    const isPassword = passwordLoginForm.type === "password";
+
+    passwordLoginForm.type = isPassword ? "text" : "password";
+
+    closeEyes.classList.toggle("flex!");
+    openEyes.classList.toggle("hidden!");
+  });
 });
