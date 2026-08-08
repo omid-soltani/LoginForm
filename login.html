@@ -15,10 +15,10 @@
     <div class="w-full max-w-md">
 
         <div class="scene">
-            <div class="card relative w-full h-full">
+            <div id="main-card" class="card relative w-full h-full">
 
                 <!-- login card -->
-                <section
+                <section id="login-card"
                     class=" face flex flex-col face bg-white absolute inset-0 rounded-3xl shadow-2xl shadow-emerald-900/30 px-8 py-10  ">
 
                     <!-- form title -->
@@ -127,10 +127,10 @@
                         You don't have an account ?
                     </p>
                     <div class="w-max mx-auto group flex flex-col items-center transition-all ">
-                        <div
-                            class="group flex items-center text-emerald-950 hover:text-emerald-600 gap-x-2.5 justify-center">
-                            <button type="button" class="  font-inter-regular  ">Registration
-                            </button>
+                        <button type="button" data-action="registration"
+                            class="group switch-btn flex items-center text-emerald-950 hover:text-emerald-600 gap-x-2.5 justify-center">
+                            <div class="  font-inter-regular  ">Registration
+                            </div>
                             <svg class="size-4.5 " xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -140,7 +140,7 @@
                                 <circle cx="9" cy="7" r="4" />
                                 <path d="M3 21v-2a4 4 0 0 1 4-4h4" />
                             </svg>
-                        </div>
+                        </button>
 
                         <span
                             class="block w-0 h-0.5 rounded-full bg-emerald-600 group-hover:w-30 transition-all"></span>
@@ -148,8 +148,8 @@
                 </section>
 
                 <!-- register card -->
-                <section
-                    class="face-back face flex flex-col bg-white absolute inset-0 rounded-3xl shadow-2xl shadow-orange-900/30  p-7 ">
+                <section id="register-card"
+                    class=" face face-back flex flex-col bg-white absolute inset-0 rounded-3xl shadow-2xl  shadow-orange-900/30  p-7 ">
 
                     <!-- form title -->
                     <div class="mb-7">
@@ -283,10 +283,10 @@
                         Are you have an account ?
                     </p>
                     <div class="w-max mx-auto group flex flex-col items-center transition-all ">
-                        <div
-                            class="group flex items-center text-orange-950 hover:text-amber-500 gap-x-2.5 justify-center">
-                            <button type="button" class="  font-inter-regular">login
-                            </button>
+                        <button type="button" data-action="login"
+                            class="group switch-btn flex items-center text-orange-950 hover:text-amber-500 gap-x-2.5 justify-center">
+                            <div class=" font-inter-regular">login
+                            </div>
                             <svg class="size-5 right-4 " xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
@@ -294,7 +294,7 @@
                                 <path d="M10 17l5-5-5-5" />
                                 <path d="M15 12H3" />
                             </svg>
-                        </div>
+                        </button>
 
                         <span class="block w-0 h-0.5 rounded-full bg-amber-500 group-hover:w-30 transition-all"></span>
                     </div>
