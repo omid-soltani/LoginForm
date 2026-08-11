@@ -5,6 +5,8 @@
   --font-inter-semibold: "Inter Semi-Bold", sans-serif;
   --font-inter-regular: "Inter Regular", sans-serif;
   --font-inter-medium: "Inter Medium", sans-serif;
+
+  --breakpoint-ss: 480px: ;
 }
 
 @layer base {
@@ -47,6 +49,12 @@
       local("Inter Medium"),
       url(../fonts/Inter-Medium.woff2) format("woff2");
     font-display: swap;
+  }
+
+  @media (max-height: 650px) {
+    body {
+      height: 700px;
+    }
   }
 }
 @layer utilities {
